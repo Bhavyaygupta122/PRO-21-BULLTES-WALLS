@@ -16,22 +16,6 @@ function setup() {
 
 function draw() {
   background("pink");  
-
-  if(wall.x-bullet.x < (bullet.width + wall.width)/2){
-    bullet.velocityX=0;
-
-    var deformation=0.5 *weight *speed*speed/25009;
-    if(deformation>180){
-      bullet.shapeColor="red";
-    }
-    if(deformation<180 && deformation>100){
-      bullet.shapeColor="yellow";
-    }
-    if(deformation<100){
-      bullet.shapeColor="blue";
-    }
-  }
-
   if(hasCollided(bullet,wall)){
 
       bullet.velocityX=0;
@@ -41,8 +25,8 @@ function draw() {
       if(damage>10){
         wall.shapeColor=color(255,0,0);
       }
-      if(damage<10){
-        wall.shapeColor=color(0,255,0);
+      else if(damage<10){
+             wall.shapeColor=color(0,255,0);
       }
    }
 
