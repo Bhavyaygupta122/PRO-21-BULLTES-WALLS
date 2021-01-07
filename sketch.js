@@ -22,13 +22,13 @@ function draw() {
 
     var deformation=0.5 *weight *speed*speed/25009;
     if(deformation>180){
-      bullet.shapeColor="white";
+      bullet.shapeColor="red";
     }
     if(deformation<180 && deformation>100){
-      bullet.shapeColor="white";
+      bullet.shapeColor="yellow";
     }
     if(deformation<100){
-      bullet.shapeColor="white";
+      bullet.shapeColor="blue";
     }
   }
 
